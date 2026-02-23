@@ -1,0 +1,282 @@
+/* Mobile Responsive Styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Mobile-first approach */
+@media (max-width: 768px) {
+  /* Main container padding for mobile */
+  .dashboard-container {
+    padding: 0 16px 24px !important;
+    max-width: 100% !important;
+  }
+
+  /* Headline story */
+  .headline-story {
+    padding: 20px 16px 16px !important;
+  }
+
+  .headline-story h2 {
+    font-size: 18px !important;
+  }
+
+  .headline-story p {
+    font-size: 13px !important;
+  }
+
+  /* KPI Grid - 2 columns on tablet, 1 column on mobile */
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  @media (max-width: 480px) {
+    .kpi-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .kpi-item {
+      padding: 12px 12px !important;
+    }
+
+    .kpi-item > div:first-child {
+      font-size: 20px !important;
+    }
+  }
+
+  /* Two-column layout - stack on mobile */
+  .two-col-layout {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .section-card {
+    padding: 16px 14px !important;
+  }
+
+  .section-card-title {
+    font-size: 12px !important;
+  }
+
+  /* Mini charts section - stack on mobile */
+  .mini-charts {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .mini-chart {
+    padding: 12px 16px !important;
+  }
+
+  .mini-chart-title {
+    font-size: 11px !important;
+  }
+
+  .mini-chart-subtitle {
+    font-size: 9px !important;
+  }
+
+  /* Rankings + Super Bowl - stack on mobile */
+  .rankings-superbowl {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Competitive positioning table - make scrollable on mobile */
+  .comp-table {
+    grid-template-columns: 80px 1fr 40px !important;
+  }
+
+  .comp-table-name {
+    font-size: 9px !important;
+    min-width: 0;
+  }
+
+  .comp-table-engagement {
+    font-size: 10px !important;
+  }
+
+  /* Executive Takeaways - stack on mobile */
+  .executive-takeaways {
+    grid-template-columns: 1fr !important;
+    gap: 16px 16px !important;
+    padding: 16px 16px !important;
+  }
+
+  .takeaway-item {
+    font-size: 11px !important;
+  }
+
+  /* Season 2 Acceleration table - make scrollable */
+  .season-table {
+    font-size: 11px !important;
+  }
+
+  .season-table table {
+    font-size: 10px !important;
+  }
+
+  /* Tab buttons */
+  .tab-button {
+    padding: 4px 10px !important;
+    font-size: 11px !important;
+  }
+
+  /* Charts - reduce height on mobile */
+  .recharts-wrapper {
+    width: 100% !important;
+  }
+
+  .recharts-surface {
+    width: 100% !important;
+  }
+
+  /* Rank badges */
+  .rank-badge {
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+  }
+
+  /* Text adjustments */
+  h2 {
+    font-size: 16px !important;
+  }
+
+  h3 {
+    font-size: 14px !important;
+  }
+
+  /* Hide/show on mobile */
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .dashboard-container {
+    padding: 0 12px 16px !important;
+  }
+
+  .headline-story {
+    padding: 16px 12px 12px !important;
+    border-radius: 12px !important;
+  }
+
+  .headline-story h2 {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .kpi-item {
+    padding: 10px 10px !important;
+  }
+
+  .kpi-item > div:first-child {
+    font-size: 18px !important;
+  }
+
+  .kpi-item > div:nth-child(2) {
+    font-size: 9px !important;
+  }
+
+  .mini-chart {
+    padding: 10px 12px !important;
+  }
+
+  /* Better spacing for small screens */
+  .section-card {
+    border-radius: 10px !important;
+    padding: 14px 12px !important;
+  }
+
+  /* Reduce chart height on very small screens */
+  .mini-chart-height {
+    height: 120px !important;
+  }
+}
+
+/* Tablet adjustments (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard-container {
+    padding: 0 24px 40px !important;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .two-col-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .mini-charts {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rankings-superbowl {
+    grid-template-columns: 1fr !important;
+  }
+
+  .executive-takeaways {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Ensure proper overflow handling */
+body {
+  overflow-x: hidden;
+}
+
+.dashboard-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Scrollable table wrapper for mobile */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -14px;
+  padding: 0 14px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #1E2D3D;
+  border-radius: 2px;
+}
+
+/* Flexible spacing */
+.spacing-sm {
+  gap: 8px;
+}
+
+.spacing-md {
+  gap: 12px;
+}
+
+.spacing-lg {
+  gap: 16px;
+}
+
+/* Responsive text */
+.text-responsive {
+  font-size: clamp(10px, 2vw, 16px);
+}
+
+.title-responsive {
+  font-size: clamp(16px, 4vw, 28px);
+}
